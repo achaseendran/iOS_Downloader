@@ -16,50 +16,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOT-Ig-cxf">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOT-Ig-cxf">
                                 <rect key="frame" x="277" y="124" width="48" height="30"/>
                                 <state key="normal" title="Master">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="tapped_master:" destination="9pv-A4-QxB" eventType="touchUpInside" id="1AX-ZS-k0V"/>
                                     <segue destination="pRm-K4-XFe" kind="show" identifier="segue_master" id="B2B-00-uJN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05J-eu-lwS">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05J-eu-lwS">
                                 <rect key="frame" x="273" y="196" width="55" height="30"/>
                                 <state key="normal" title="Release">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="tapped_release:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Uvr-bp-fH3"/>
                                     <segue destination="pRm-K4-XFe" kind="show" identifier="segue_master" id="xbq-IH-35r"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGY-RG-wVY">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGY-RG-wVY">
                                 <rect key="frame" x="278" y="253" width="45" height="30"/>
                                 <state key="normal" title="Cocos">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="tapped_cocos:" destination="9pv-A4-QxB" eventType="touchUpInside" id="oUm-DG-AHw"/>
                                     <segue destination="pRm-K4-XFe" kind="show" identifier="segue_master" id="bnn-sa-XwQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssh-XT-IZO">
+                                <rect key="frame" x="257" y="308" width="87" height="30"/>
+                                <state key="normal" title="Pull Request">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="userInput:" destination="9pv-A4-QxB" eventType="touchUpInside" id="vP6-De-44e"/>
+                                    <segue destination="pRm-K4-XFe" kind="custom" identifier="segue_pr" id="GcB-px-c7p"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="uGY-RG-wVY" secondAttribute="centerX" constant="-0.5" id="23j-Wj-ioh"/>
-                            <constraint firstAttribute="centerX" secondItem="05J-eu-lwS" secondAttribute="centerX" constant="-0.5" id="bJj-g7-dNH"/>
-                            <constraint firstAttribute="centerX" secondItem="cOT-Ig-cxf" secondAttribute="centerX" constant="-1" id="hC6-45-TNF"/>
-                            <constraint firstItem="cOT-Ig-cxf" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="104" id="vTC-p2-mnD"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Download" image="Players.png" id="acW-dT-cKf"/>
                     <navigationItem key="navigationItem" id="R2b-vD-GSW"/>
                     <connections>
                         <outlet property="button_cocos" destination="uGY-RG-wVY" id="1df-bI-aCC"/>
                         <outlet property="button_master" destination="cOT-Ig-cxf" id="JxG-G5-syc"/>
+                        <outlet property="button_pullRequest" destination="ssh-XT-IZO" id="pKq-qU-22J"/>
                         <outlet property="button_release" destination="05J-eu-lwS" id="w2z-f3-5fH"/>
                     </connections>
                 </viewController>
@@ -181,6 +183,6 @@
         <image name="Players.png" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="B2B-00-uJN"/>
+        <segue reference="bnn-sa-XwQ"/>
     </inferredMetricsTieBreakers>
 </document>
