@@ -53,6 +53,9 @@ class WebViewController: UIViewController {
         case 3:
             siteName = "pullRequests/"+dataWeb
             navTitle = "Pull Request"
+        case 4:
+            siteName = "launcher"
+            navTitle = "iOS Debug Launcher"
         default:
             siteName = "error"
             navTitle = "error"

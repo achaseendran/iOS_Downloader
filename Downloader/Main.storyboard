@@ -21,7 +21,7 @@
                                 <rect key="frame" x="150" y="111" width="300" height="300"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOT-Ig-cxf">
-                                        <rect key="frame" x="126" y="60" width="48" height="30"/>
+                                        <rect key="frame" x="126" y="38" width="48" height="30"/>
                                         <state key="normal" title="Master">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -30,7 +30,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05J-eu-lwS">
-                                        <rect key="frame" x="123" y="110" width="55" height="30"/>
+                                        <rect key="frame" x="123" y="86" width="55" height="30"/>
                                         <state key="normal" title="Release">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -39,7 +39,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssh-XT-IZO">
-                                        <rect key="frame" x="107" y="205" width="87" height="30"/>
+                                        <rect key="frame" x="107" y="187" width="87" height="30"/>
                                         <state key="normal" title="Pull Request">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -49,12 +49,21 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGY-RG-wVY">
-                                        <rect key="frame" x="119" y="157" width="62" height="30"/>
+                                        <rect key="frame" x="119" y="137" width="62" height="30"/>
                                         <state key="normal" title="Cocos2d">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <segue destination="pRm-K4-XFe" kind="show" identifier="segue_master" id="bnn-sa-XwQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ez-Bg-mcF">
+                                        <rect key="frame" x="93" y="234" width="114" height="30"/>
+                                        <state key="normal" title="Debug Launcher">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="pRm-K4-XFe" kind="show" identifier="segue_master" id="AyT-hX-p74"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -207,6 +216,6 @@
         <image name="line__0000s_0098_download.png" width="40" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xbq-IH-35r"/>
+        <segue reference="AyT-hX-p74"/>
     </inferredMetricsTieBreakers>
 </document>
