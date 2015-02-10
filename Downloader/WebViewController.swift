@@ -49,10 +49,10 @@ class WebViewController: UIViewController {
             navTitle = "Release"
         case 2:
             siteName = "lm-cocos2d"
-            navTitle = "Cocos 2D"
+            navTitle = "Cocos2d"
         case 3:
             siteName = "pullRequests/"+dataWeb
-            navTitle = "Pull Requests"
+            navTitle = "Pull Request"
         default:
             siteName = "error"
             navTitle = "error"

@@ -16,6 +16,7 @@
 		BB88323D1A8319310041D1B4 /* Gestures.png in Resources */ = {isa = PBXBuildFile; fileRef = BB88323B1A8319310041D1B4 /* Gestures.png */; };
 		BB88323E1A8319310041D1B4 /* Players.png in Resources */ = {isa = PBXBuildFile; fileRef = BB88323C1A8319310041D1B4 /* Players.png */; };
 		BB8832401A83DE820041D1B4 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB88323F1A83DE820041D1B4 /* WebViewController.swift */; };
+		BBA5CB7D1A899E9400FEEA41 /* line__0000s_0098_download.png in Resources */ = {isa = PBXBuildFile; fileRef = BBA5CB7C1A899E9400FEEA41 /* line__0000s_0098_download.png */; };
 		BBBF95C31A843CFD0068BB15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBBF95C21A843CFD0068BB15 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		BB88323B1A8319310041D1B4 /* Gestures.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gestures.png; sourceTree = "<group>"; };
 		BB88323C1A8319310041D1B4 /* Players.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Players.png; sourceTree = "<group>"; };
 		BB88323F1A83DE820041D1B4 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		BBA5CB7C1A899E9400FEEA41 /* line__0000s_0098_download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line__0000s_0098_download.png; sourceTree = "<group>"; };
 		BBBF95C21A843CFD0068BB15 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +87,7 @@
 		BB8832161A8311B80041D1B4 /* Downloader */ = {
 			isa = PBXGroup;
 			children = (
+				BBA5CB7C1A899E9400FEEA41 /* line__0000s_0098_download.png */,
 				BBBF95C21A843CFD0068BB15 /* Main.storyboard */,
 				BB0EF83A1A843C630093682D /* LaunchScreen.xib */,
 				BB88323B1A8319310041D1B4 /* Gestures.png */,
@@ -204,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBA5CB7D1A899E9400FEEA41 /* line__0000s_0098_download.png in Resources */,
 				BB0EF83B1A843C630093682D /* LaunchScreen.xib in Resources */,
 				BBBF95C31A843CFD0068BB15 /* Main.storyboard in Resources */,
 				BB88323D1A8319310041D1B4 /* Gestures.png in Resources */,

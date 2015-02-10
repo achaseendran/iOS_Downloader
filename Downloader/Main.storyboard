@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Download-->
+        <!--First View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="Downloader" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,15 +38,6 @@
                                             <segue destination="pRm-K4-XFe" kind="show" identifier="segue_master" id="xbq-IH-35r"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGY-RG-wVY">
-                                        <rect key="frame" x="128" y="157" width="45" height="30"/>
-                                        <state key="normal" title="Cocos">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="pRm-K4-XFe" kind="show" identifier="segue_master" id="bnn-sa-XwQ"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssh-XT-IZO">
                                         <rect key="frame" x="107" y="205" width="87" height="30"/>
                                         <state key="normal" title="Pull Request">
@@ -55,6 +46,15 @@
                                         <connections>
                                             <action selector="userInput:" destination="9pv-A4-QxB" eventType="touchUpInside" id="vP6-De-44e"/>
                                             <segue destination="pRm-K4-XFe" kind="show" identifier="segue_pr" id="uNL-PD-nWx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGY-RG-wVY">
+                                        <rect key="frame" x="119" y="157" width="62" height="30"/>
+                                        <state key="normal" title="Cocos2d">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="pRm-K4-XFe" kind="show" identifier="segue_master" id="bnn-sa-XwQ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -71,7 +71,7 @@
                             <constraint firstAttribute="centerX" secondItem="pIi-rB-KMb" secondAttribute="centerX" id="lQG-gy-YHb"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Download" image="Players.png" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" selectedImage="line__0000s_0098_download.png" systemItem="downloads" id="acW-dT-cKf"/>
                     <navigationItem key="navigationItem" id="R2b-vD-GSW"/>
                     <connections>
                         <outlet property="button_cocos" destination="uGY-RG-wVY" id="1df-bI-aCC"/>
@@ -181,12 +181,13 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Server-->
+        <!--Item-->
         <scene sceneID="Lpl-RF-TIS">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ueJ-I4-ZXW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Server" image="Gestures.png" id="snV-eE-o3v"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="Gestures.png" id="mpo-PB-BYc"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Ac-em-BQr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -203,7 +204,7 @@
     </scenes>
     <resources>
         <image name="Gestures.png" width="30" height="30"/>
-        <image name="Players.png" width="30" height="30"/>
+        <image name="line__0000s_0098_download.png" width="40" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="xbq-IH-35r"/>
