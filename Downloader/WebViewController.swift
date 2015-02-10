@@ -20,8 +20,6 @@ class WebViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        println(dataPassed)
-        println(dataWeb)
         selectBranch(dataPassed)
         loadPage()
         // Do any additional setup after loading the view.
@@ -33,11 +31,9 @@ class WebViewController: UIViewController {
     }
     
     func loadPage() {
-        navBar.title = navTitle
+        navBar.title =  navTitle
         var addEmUp = "http://s3.amazonaws.com/lumos-mobile-public/builds/"+siteName+"/index.html"
-        println(addEmUp)
         var requestURL = NSURL(string: addEmUp)
-        println(requestURL)
         let request = NSURLRequest(URL: requestURL!)
         view_master.loadRequest(request)
     }
@@ -55,7 +51,7 @@ class WebViewController: UIViewController {
             siteName = "lm-cocos2d"
             navTitle = "Cocos 2D"
         case 3:
-            siteName = "pullRequests"
+            siteName = "pullRequests/"+dataWeb
             navTitle = "Pull Requests"
         default:
             siteName = "error"

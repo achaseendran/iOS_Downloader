@@ -9,7 +9,7 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-
+    
     @IBOutlet weak var button_master: UIButton!
     @IBOutlet weak var button_release: UIButton!
     @IBOutlet weak var button_cocos: UIButton!
@@ -18,24 +18,25 @@ class FirstViewController: UIViewController {
     @IBAction func unwindToViewController(Sender:UIStoryboardSegue){
         
     }
-
+    
     var branchPR:String! = ""
     
     @IBAction func userInput(sender: UIButton) {
         let inputBox = UIAlertController(title: "Pull Requests", message: "", preferredStyle: .Alert)
         let inputNo = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
         let inputOK = UIAlertAction(title: "OK", style: .Default, handler:
-            { (action) -> Void in
-            let textField = inputBox.textFields![0] as UITextField
-            let branchPR = textField.text
-                self.performSegueWithIdentifier("segue_pr", sender: self)
-                
-            })
+            {(action) -> Void in
+                let textField = inputBox.textFields![0] as UITextField
+                self.branchPR = textField.text
+                if (self.branchPR.isEmpty == false)
+                {
+                    self.performSegueWithIdentifier("segue_pr", sender: self)
+                }
+        })
         inputBox.addTextFieldWithConfigurationHandler(addTextField)
         inputBox.addAction(inputNo)
         inputBox.addAction(inputOK)
         self.presentViewController(inputBox, animated: true) {
-            //test
         }
     }
     
@@ -43,45 +44,42 @@ class FirstViewController: UIViewController {
         textField.placeholder = "Enter PR Branch Name"
     }
     
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    /*override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject?) -> Bool {
+    override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject?) -> Bool {
         if identifier == "segue_pr" {
             if(branchPR == ""){
                 return false
             } else {
-                
                 return true
             }
         }
-        return false
-    }*/
+        return true
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var svc = segue.destinationViewController as WebViewController
         if segue.identifier == "segue_master" {
-            var svc = segue.destinationViewController as WebViewController
             svc.dataPassed = sender?.tag
-            
         }
         else if segue.identifier == "segue_pr" {
-            var pr = segue.destinationViewController as WebViewController
-            pr.dataPassed = 4
-            pr.dataWeb = branchPR
+            svc.dataPassed = 3
+            svc.dataWeb = branchPR
+            branchPR = ""
         }
     }
     
     
-
-
+    
+    
 }
 

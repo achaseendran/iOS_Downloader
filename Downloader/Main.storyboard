@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Download-->
@@ -16,45 +17,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOT-Ig-cxf">
-                                <rect key="frame" x="277" y="124" width="48" height="30"/>
-                                <state key="normal" title="Master">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="pRm-K4-XFe" kind="show" identifier="segue_master" id="B2B-00-uJN"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05J-eu-lwS">
-                                <rect key="frame" x="273" y="196" width="55" height="30"/>
-                                <state key="normal" title="Release">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="pRm-K4-XFe" kind="show" identifier="segue_master" id="xbq-IH-35r"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGY-RG-wVY">
-                                <rect key="frame" x="278" y="253" width="45" height="30"/>
-                                <state key="normal" title="Cocos">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="pRm-K4-XFe" kind="show" identifier="segue_master" id="bnn-sa-XwQ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssh-XT-IZO">
-                                <rect key="frame" x="257" y="308" width="87" height="30"/>
-                                <state key="normal" title="Pull Request">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="userInput:" destination="9pv-A4-QxB" eventType="touchUpInside" id="vP6-De-44e"/>
-                                    <segue destination="pRm-K4-XFe" kind="custom" identifier="segue_pr" id="GcB-px-c7p"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pIi-rB-KMb">
+                                <rect key="frame" x="150" y="111" width="300" height="300"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOT-Ig-cxf">
+                                        <rect key="frame" x="126" y="60" width="48" height="30"/>
+                                        <state key="normal" title="Master">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="pRm-K4-XFe" kind="show" identifier="segue_master" id="B2B-00-uJN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05J-eu-lwS">
+                                        <rect key="frame" x="123" y="110" width="55" height="30"/>
+                                        <state key="normal" title="Release">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="pRm-K4-XFe" kind="show" identifier="segue_master" id="xbq-IH-35r"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGY-RG-wVY">
+                                        <rect key="frame" x="128" y="157" width="45" height="30"/>
+                                        <state key="normal" title="Cocos">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="pRm-K4-XFe" kind="show" identifier="segue_master" id="bnn-sa-XwQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssh-XT-IZO">
+                                        <rect key="frame" x="107" y="205" width="87" height="30"/>
+                                        <state key="normal" title="Pull Request">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="userInput:" destination="9pv-A4-QxB" eventType="touchUpInside" id="vP6-De-44e"/>
+                                            <segue destination="pRm-K4-XFe" kind="show" identifier="segue_pr" id="uNL-PD-nWx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Ofj-xo-nVx"/>
+                                    <constraint firstAttribute="height" constant="300" id="PdE-UG-EQG"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="pIi-rB-KMb" secondAttribute="centerY" constant="39" id="Cge-g8-6zC"/>
+                            <constraint firstAttribute="centerX" secondItem="pIi-rB-KMb" secondAttribute="centerX" id="lQG-gy-YHb"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Download" image="Players.png" id="acW-dT-cKf"/>
                     <navigationItem key="navigationItem" id="R2b-vD-GSW"/>
@@ -81,11 +96,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QIl-k2-0TB">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QIl-k2-0TB">
                                 <rect key="frame" x="-5" y="64" width="600" height="541"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GLg-a9-VRN">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GLg-a9-VRN">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
                                     <navigationItem id="Dnu-0Q-K1I">
@@ -100,6 +115,15 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QIl-k2-0TB" firstAttribute="leading" secondItem="XUw-q8-b9r" secondAttribute="leadingMargin" constant="-21" id="3l9-hl-fkI"/>
+                            <constraint firstItem="GLg-a9-VRN" firstAttribute="bottom" secondItem="QIl-k2-0TB" secondAttribute="top" id="5e8-JM-ZMl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QIl-k2-0TB" secondAttribute="trailing" constant="-11" id="7Qg-mX-XPn"/>
+                            <constraint firstAttribute="centerX" secondItem="GLg-a9-VRN" secondAttribute="centerX" id="EJh-Vz-YmI"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="QIl-k2-0TB" secondAttribute="bottom" constant="-5" id="Ici-Qg-FYe"/>
+                            <constraint firstItem="GLg-a9-VRN" firstAttribute="leading" secondItem="XUw-q8-b9r" secondAttribute="leading" id="To1-xm-3jU"/>
+                            <constraint firstItem="GLg-a9-VRN" firstAttribute="top" secondItem="eAI-0F-nwg" secondAttribute="bottom" id="aeV-yd-q05"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CxN-dN-aTJ"/>
                     <connections>
@@ -151,7 +175,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="ueJ-I4-ZXW" kind="relationship" relationship="viewControllers" id="AT4-k2-00d"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -183,6 +206,6 @@
         <image name="Players.png" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bnn-sa-XwQ"/>
+        <segue reference="xbq-IH-35r"/>
     </inferredMetricsTieBreakers>
 </document>
